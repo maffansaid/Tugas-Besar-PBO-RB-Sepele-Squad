@@ -17,12 +17,14 @@ class GLOBAL(pygame.sprite.Sprite):
 	def aksi(self):
 		pass
 
-def tempat_gambar(*variabel):
+def gambar(*variabel):
 	def ambil_gambar(lokasi_file, nama_gambar):
 		lokasi_gambar = os.path.join('Assets', lokasi_file, nama_gambar)
 		file_gambar = pygame.image.load(lokasi_gambar)
 		return file_gambar
-	return {'key' : ambil_gambar(variabel[0],variabel[1])}
+	return [ambil_gambar(variabel[0], i) for i in variabel[1]]
+
+GAMBAR_MENU_UTAMA = gambar('Menu_Utama', ('Background.jpg','Title.png', 'Play.png', 'Character.png', 'Setting.png', 'Exit.png', 'Info.png'))
 	
 class Tombol(GLOBAL):
 	def __init__(self, **variabel):
