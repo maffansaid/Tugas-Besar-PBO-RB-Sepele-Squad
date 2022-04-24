@@ -63,6 +63,9 @@ Tombol_informasi = Tombol(
     x=,
     y=,
     gambar=)
+
+TOMBOL_MENU = pygame.sprite.Group()
+TOMBOL_MENU.add(Tombol_mulai, Tombol_karakter,Tombol_pengaturan, Tombol_keluar, Tombol_informasi)
 	
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
@@ -71,10 +74,13 @@ pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
 berjalan = True
 while berjalan:
 	Layar.fill((255, 255, 255))
-
+	for tombol in TOMBOL_MENU:
+        	Layar.blit(tombol.gambar, tombol.posisi)
+		
 	for acara in pygame.event.get():
-		if acara.type == pygame.QUIT:
-			berjalan = False
+      	 	if acara.type == pygame.QUIT:
+            		berjalan = False
+
 
 	pygame.display.flip()
 
