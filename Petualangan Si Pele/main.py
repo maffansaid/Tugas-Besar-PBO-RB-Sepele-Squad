@@ -28,6 +28,42 @@ class Tombol(GLOBAL):
 	def __init__(self, **variabel):
 		pass
 	
+Tombol_mulai = Tombol(
+    id=,
+    panjang=,
+    lebar=,
+    x=,
+    y=,
+    gambar=)
+Tombol_karakter = Tombol(
+    id=,
+    panjang=,
+    lebar=,
+    x=,
+    y=,
+    gambar=)
+Tombol_pengaturan = Tombol(
+    id=,
+    panjang=,
+    lebar=,
+    x=,
+    y=,
+    gambar=)
+Tombol_keluar = Tombol(
+    id=,
+    panjang=,
+    lebar=,
+    x=,
+    y=,
+    gambar=)
+Tombol_informasi = Tombol(
+    id=,
+    panjang=,
+    lebar=,
+    x=,
+    y=,
+    gambar=)
+	
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
 pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
