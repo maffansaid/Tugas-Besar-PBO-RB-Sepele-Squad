@@ -1,4 +1,4 @@
-import pygame, pygame.locals
+import pygame, os, pygame.locals
 
 UKURAN_LAYAR = (850, 500)
 
@@ -17,6 +17,13 @@ class GLOBAL(pygame.sprite.Sprite):
 	def aksi(self):
 		pass
 
+def tempat_gambar(*variabel):
+	def ambil_gambar(lokasi_file, nama_gambar):
+		lokasi_gambar = os.path.join('Assets', lokasi_file, nama_gambar)
+		file_gambar = pygame.image.load(lokasi_gambar)
+		return file_gambar
+	return {'key' : ambil_gambar(variabel[0],variabel[1])}
+	
 class Tombol(GLOBAL):
 	def __init__(self, **variabel):
 		pass
