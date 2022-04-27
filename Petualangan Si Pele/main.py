@@ -145,7 +145,7 @@ Latar_belakang = pygame.transform.smoothscale(
 	Latar_belakang, 
 	(ukuran_panjang, ukuran_lebar))
 
-musik = pygame.mixer.music.load('Assets\\Musik\\Musik_Menu.mp3')
+musik = pygame.mixer.music.load('Assets\\Music\\Musik_Menu.mp3')
 pygame.mixer.music.play(-1)
 
 berjalan = True
