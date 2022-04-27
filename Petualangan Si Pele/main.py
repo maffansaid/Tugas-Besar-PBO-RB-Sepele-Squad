@@ -152,8 +152,8 @@ while berjalan:
 		Layar.blit(tombol.gambar, tombol.posisi)
 	
 	for acara in pygame.event.get():
-      	 	if acara.type == pygame.QUIT:
-            		berjalan = False
+		if acara.type == pygame.QUIT:
+			berjalan = False
 		elif acara.type == pygame.locals.KEYUP:
 			if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT) and Utama:
 				TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 5
