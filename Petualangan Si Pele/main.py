@@ -18,11 +18,11 @@ def gambar(*variabel):
 GAMBAR = {
 	'MENU_UTAMA' : {
 		'LatarBelakang' : gambar('Menu_Utama', ('LatarBelakang.jpg',)),
-		'Mulai' 		: gambar('Menu_Utama', ('Mulai.png',)),
-		'Karakter' 		: gambar('Menu_Utama', ('Karakter.png',)),
+		'Mulai' 	: gambar('Menu_Utama', ('Mulai.png',)),
+		'Karakter' 	: gambar('Menu_Utama', ('Karakter.png',)),
 		'Pengaturan' 	: gambar('Menu_Utama', ('Pengaturan.png',)),
-		'Keluar' 		: gambar('Menu_Utama', ('Keluar.png',)),
-		'Info' 			: gambar('Menu_Utama', ('Info.png',)),
+		'Keluar' 	: gambar('Menu_Utama', ('Keluar.png',)),
+		'Info' 		: gambar('Menu_Utama', ('Info.png',)),
 	}
 }
 
@@ -41,12 +41,11 @@ class GLOBAL(pygame.sprite.Sprite):
 class Tombol(Global):
 	def aktif(self):
 		global TOMBOL_AKTIF
-		
+
 		if TOMBOL_AKTIF == self.id:
 			self.gambar = pygame.transform.smoothscale(self._file, (self._ukuran[0] + 15, self._ukuran[1] + 15))
 		else:
 			self.gambar = pygame.transform.smoothscale(self._file, self._ukuran)
-		
 		self.posisi = self.gambar.get_rect(center = self._pos)
 
 class Karakter(Global):
@@ -149,18 +148,16 @@ while berjalan:
 	Layar.blit(Latar_belakang, (0, 0))
 	
 	for tombol in TOMBOL['menu'].values():
-			tombol.aktif()
-			Layar.blit(tombol.gambar, tombol.posisi)
+		tombol.aktif()
+		Layar.blit(tombol.gambar, tombol.posisi)
 	
 	for acara in pygame.event.get():
       	 	if acara.type == pygame.QUIT:
             		berjalan = False
-			elif acara.type == pygame.locals.KEYUP:
-				if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT) and Utama:
-					TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 5
-				elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT) and Utama:
-					TOMBOL_AKTIF = (TOMBOL_AKTIF + 4) % 5
-
+		elif acara.type == pygame.locals.KEYUP:
+			if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT) and Utama:
+				TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 5
+			elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT) and Utama:
+				TOMBOL_AKTIF = (TOMBOL_AKTIF + 4) % 5
 	pygame.display.flip()
-
 pygame.quit()
