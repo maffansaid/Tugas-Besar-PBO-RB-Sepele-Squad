@@ -16,7 +16,19 @@ class GLOBAL(pygame.sprite.Sprite):
 		pass
 	def aksi(self):
 		pass
+	
+class Rintangan(Global):
+	_waktu = 60
+	_kecepatan = None
+	def _tambah_rintangan(self):
+		pass
+	def kurang_darah(self):
+		pass
 
+class Level(Rintangan):
+	def efek_level(self):
+		pass
+  
 def gambar(*variabel):
 	def ambil_gambar(lokasi_file, nama_gambar):
 		lokasi_gambar = os.path.join('Assets', lokasi_file, nama_gambar)
@@ -29,7 +41,6 @@ GAMBAR_MENU_UTAMA = gambar('Menu_Utama', ('Background.jpg','Title.png', 'Play.pn
 class Tombol(GLOBAL):
 	def __init__(self, **variabel):
 		pass
-
 class Karakter(Global):
 	__darah = 100
 	def bergerak(self):
