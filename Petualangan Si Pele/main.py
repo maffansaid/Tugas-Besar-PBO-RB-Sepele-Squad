@@ -25,6 +25,10 @@ class Rintangan(Global):
 	def kurang_darah(self):
 		pass
 
+class Level(Rintangan):
+	def efek_level(self):
+		pass
+  
 def gambar(*variabel):
 	def ambil_gambar(lokasi_file, nama_gambar):
 		lokasi_gambar = os.path.join('Assets', lokasi_file, nama_gambar)
@@ -37,10 +41,15 @@ GAMBAR_MENU_UTAMA = gambar('Menu_Utama', ('Background.jpg','Title.png', 'Play.pn
 class Tombol(GLOBAL):
 	def __init__(self, **variabel):
 		pass
-
-class Level(Rintangan):
-	def efek_level(self):
+class Karakter(Global):
+	__darah = 100
+	def bergerak(self):
 		pass
+	def darah_berubah(self):
+		pass
+
+class Item(Karakter):
+	_kecepatan = None
 	
 Tombol_mulai = Tombol(
     id=,
