@@ -29,6 +29,10 @@ GAMBAR_MENU_UTAMA = gambar('Menu_Utama', ('Background.jpg','Title.png', 'Play.pn
 class Tombol(GLOBAL):
 	def __init__(self, **variabel):
 		pass
+
+class Level(Rintangan):
+	def efek_level(self):
+		pass
 	
 Tombol_mulai = Tombol(
     id=,
