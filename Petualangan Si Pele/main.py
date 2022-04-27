@@ -16,6 +16,14 @@ class GLOBAL(pygame.sprite.Sprite):
 		pass
 	def aksi(self):
 		pass
+	
+class Rintangan(Global):
+	_waktu = 60
+	_kecepatan = None
+	def _tambah_rintangan(self):
+		pass
+	def kurang_darah(self):
+		pass
 
 def gambar(*variabel):
 	def ambil_gambar(lokasi_file, nama_gambar):
