@@ -15,6 +15,8 @@ def gambar(*variabel):
 		return ambil_gambar(variabel[0], variabel[1][0])	
 	return [ambil_gambar(variabel[0], i) for i in variabel[1]]
 
+rubah_ukuran = lambda A,B,C: A * C / B
+
 GAMBAR = {
 	'MENU_UTAMA' : {
 		'LatarBelakang' : gambar('Menu_Utama', ('LatarBelakang.jpg',)),
@@ -26,9 +28,9 @@ GAMBAR = {
 	}
 }
 
-class GLOBAL(pygame.sprite.Sprite):
+class Global(pygame.sprite.Sprite):
 	def __init__(self, **variabel):
-		super(GLOBAL, self).__init__()
+		super(Global, self).__init__()
 		self.id = variabel['id']
 		self._ukuran = (variabel['panjang'], variabel['lebar'])
 		self._pos = (variabel['x'], variabel['y'])
@@ -130,7 +132,7 @@ TOMBOL = {
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
 pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
-pygame.display.set_icon(GAMBAR['KARAKTER'][0])
+# pygame.display.set_icon(GAMBAR['KARAKTER'][0])
 
 Latar_belakang = GAMBAR['MENU_UTAMA']['LatarBelakang']
 
@@ -155,9 +157,9 @@ while berjalan:
 		if acara.type == pygame.QUIT:
 			berjalan = False
 		elif acara.type == pygame.locals.KEYUP:
-			if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT) and Utama:
+			if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT):
 				TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 5
-			elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT) and Utama:
+			elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT):
 				TOMBOL_AKTIF = (TOMBOL_AKTIF + 4) % 5
 	pygame.display.flip()
 pygame.quit()
