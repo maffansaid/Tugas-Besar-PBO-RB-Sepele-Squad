@@ -32,50 +32,24 @@ GAMBAR = {
 	}
 }
 
-class Global(pygame.sprite.Sprite):
+class Tombol(pygame.sprite.Sprite):
 	def __init__(self, **variabel):
-		super(Global, self).__init__()
+		super(Tombol, self).__init__()
 		self.id = variabel['id']
 		self._ukuran = (variabel['panjang'], variabel['lebar'])
 		self._pos = (variabel['x'], variabel['y'])
 		self._file = variabel['gambar']
-		self.gambar = pygame.transform.scale(self._file, self._ukuran)
+		self.gambar = pygame.transform.smoothscale(self._file, self._ukuran)
 		self.posisi = self.gambar.get_rect(center = self._pos)
-	def aksi(self):
-		pass
-
-class Tombol(Global):
-	def aktif(self):
+	def aktif(self, Layar):
 		global TOMBOL_AKTIF
-
 		if TOMBOL_AKTIF == self.id:
 			self.gambar = pygame.transform.smoothscale(self._file, (self._ukuran[0] + 15, self._ukuran[1] + 15))
 		else:
 			self.gambar = pygame.transform.smoothscale(self._file, self._ukuran)
 		self.posisi = self.gambar.get_rect(center = self._pos)
-
-class Karakter(Global):
-	__darah = 100
-	def bergerak(self):
-		pass
-	def darah_berubah(self):
-		pass
-
-class Item(Karakter):
-	_kecepatan = None
-	
-class Rintangan(Global):
-	_waktu = 60
-	_kecepatan = None
-	def _tambah_rintangan(self):
-		pass
-	def kurang_darah(self):
-		pass
-
-class Level(Rintangan):
-	def efek_level(self):
-		pass
-
+		Layar.blit(self.gambar, self.posisi)
+		
 TOMBOL = {
 	'menu' : {
 		'mulai' : Tombol(
@@ -157,8 +131,7 @@ while berjalan:
 	Layar.blit(Latar_belakang, (0, 0))
 	
 	for tombol in TOMBOL['menu'].values():
-		tombol.aktif()
-		Layar.blit(tombol.gambar, tombol.posisi)
+		tombol.aktif(Layar)
 	
 	for acara in pygame.event.get():
 		if acara.type == pygame.QUIT:
