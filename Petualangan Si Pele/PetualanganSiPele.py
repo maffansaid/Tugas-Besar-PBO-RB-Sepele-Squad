@@ -110,18 +110,9 @@ TOMBOL = {
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
 pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
-# pygame.display.set_icon(GAMBAR['KARAKTER'][0])
 
-Latar_belakang = GAMBAR['MENU_UTAMA']['LatarBelakang']
-
-ukuran_panjang = UKURAN_LAYAR[0]
-ukuran_lebar = rubah_ukuran(
-	Latar_belakang.get_height(), 
-	Latar_belakang.get_width(), 
-	UKURAN_LAYAR[0])
 Latar_belakang = pygame.transform.smoothscale(
-	Latar_belakang, 
-	(ukuran_panjang, ukuran_lebar))
+	GAMBAR['MENU_UTAMA']['LatarBelakang'], UKURAN_LAYAR)
 
 musik = pygame.mixer.music.load('Assets\\Music\\Musik_Menu.mp3')
 pygame.mixer.music.play(-1)
