@@ -1,4 +1,10 @@
-import pygame, os, pygame.locals
+try:
+	import pygame, pygame.locals
+except:
+	print('#- Mohon Maaf Modul Pygame Tidak Ditemukan -#')
+	exit()
+
+import random
 
 UKURAN_LAYAR = (960, 540)
 TOMBOL_AKTIF = 0
