@@ -11,13 +11,12 @@ TOMBOL_AKTIF = 0
 
 pygame.init()
 
-def gambar(*variabel):
-	def ambil_gambar(lokasi_file, nama_gambar):		
+def gambar(lokasi, nama):
+	def ambil_gambar(lokasi_file, nama_gambar):
 		return pygame.image.load(f'Assets\\{lokasi_file}\\{nama_gambar}')
-	if len(variabel[1]) == 1:
-		return ambil_gambar(variabel[0], variabel[1][0])	
-	return [ambil_gambar(variabel[0], i) for i in variabel[1]]
-
+	if len(nama) == 1:
+		return ambil_gambar(lokasi, nama[0])	
+	return [ambil_gambar(lokasi, i) for i in nama]
 
 rubah_ukuran = lambda A,B,C: A * C / B
 
@@ -39,16 +38,17 @@ class Tombol(pygame.sprite.Sprite):
 		self._ukuran = (variabel['panjang'], variabel['lebar'])
 		self._pos = (variabel['x'], variabel['y'])
 		self._file = variabel['gambar']
-		self.gambar = pygame.transform.smoothscale(self._file, self._ukuran)
-		self.posisi = self.gambar.get_rect(center = self._pos)
 	def aktif(self, Layar):
 		global TOMBOL_AKTIF
 		if TOMBOL_AKTIF == self.id:
-			self.gambar = pygame.transform.smoothscale(self._file, (self._ukuran[0] + 15, self._ukuran[1] + 15))
+			gambar = pygame.transform.smoothscale(
+				self._file, 
+				(self._ukuran[0] + 15, self._ukuran[1] + 15))
 		else:
-			self.gambar = pygame.transform.smoothscale(self._file, self._ukuran)
-		self.posisi = self.gambar.get_rect(center = self._pos)
-		Layar.blit(self.gambar, self.posisi)
+			gambar = pygame.transform.smoothscale(
+				self._file, self._ukuran)
+		posisi = gambar.get_rect(center = self._pos)
+		Layar.blit(gambar, posisi)
 		
 TOMBOL = {
 	'menu' : {
