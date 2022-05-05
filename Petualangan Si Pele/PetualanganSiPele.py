@@ -6,10 +6,10 @@ except:
 
 import random
 
+pygame.init()
+
 UKURAN_LAYAR = (960, 540)
 TOMBOL_AKTIF = 0
-
-pygame.init()
 
 def gambar(lokasi, nama):
 	def ambil_gambar(lokasi_file, nama_gambar):
@@ -106,7 +106,8 @@ TOMBOL = {
 		)
 	}
 }
-	
+
+# Program Utama (Menu Utama)
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
 pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
