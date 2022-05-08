@@ -148,6 +148,22 @@ TOMBOL = {
 	}
 }
 
+def Menu_pengaturan(Layar):
+	global UKURAN_LAYAR, GAMBAR, TOMBOL, TOMBOL_AKTIF, MUSIK, EFEK_SUARA
+
+	Latar_belakang = pygame.transform.smoothscale(
+		GAMBAR['MENU_PENGATURAN']['LatarBelakang'].convert(), 
+		UKURAN_LAYAR)
+
+	while True:
+		Layar.blit(Latar_belakang, (0, 0))
+
+		for acara in pygame.event.get():
+			if acara.type == pygame.QUIT:
+				return False
+
+		pygame.display.flip()
+
 # Program Utama (Menu Utama)
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
