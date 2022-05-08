@@ -22,6 +22,7 @@ rubah_ukuran = lambda A,B,C: A * C / B
 
 GAMBAR = {
 	'MENU_UTAMA' : {
+		'Icon' 		: gambar('Menu_Utama', ('Icon.jpg',)),
 		'LatarBelakang' : gambar('Menu_Utama', ('LatarBelakang.jpg',)),
 		'Mulai' 	: gambar('Menu_Utama', ('Mulai.png',)),
 		'Karakter' 	: gambar('Menu_Utama', ('Karakter.png',)),
