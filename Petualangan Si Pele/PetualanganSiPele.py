@@ -29,7 +29,10 @@ GAMBAR = {
 		'Pengaturan' 	: gambar('Menu_Utama', ('Pengaturan.png',)),
 		'Keluar' 	: gambar('Menu_Utama', ('Keluar.png',)),
 		'Info' 		: gambar('Menu_Utama', ('Info.png',)),
-	}
+	},
+	'MENU_INFO' : {
+		'Info' 		: gambar('Menu_Info', ('Info.png',)),
+	},
 }
 
 class Tombol(pygame.sprite.Sprite):
