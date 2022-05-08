@@ -11,6 +11,9 @@ pygame.init()
 UKURAN_LAYAR = (960, 540)
 TOMBOL_AKTIF = 0
 
+EFEK_SUARA = True
+MUSIK = True
+
 def gambar(lokasi, nama):
 	def ambil_gambar(lokasi_file, nama_gambar):
 		return pygame.image.load(f'Assets\\{lokasi_file}\\{nama_gambar}')
