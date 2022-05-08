@@ -33,6 +33,14 @@ GAMBAR = {
 		'Keluar' 	: gambar('Menu_Utama', ('Keluar.png',)),
 		'Info' 		: gambar('Menu_Utama', ('Info.png',)),
 	},
+	'MENU_PENGATURAN' : {
+		'LatarBelakang' : gambar('Menu_Pengaturan', ('LatarBelakang.jpg',)),
+		'Musik' 		: gambar('Menu_Pengaturan', ('Musik.png',)),
+		'EfekSuara' 	: gambar('Menu_Pengaturan', ('EfekSuara.png',)),
+		'MusikHidup' 	: gambar('Menu_Pengaturan', ('MusikHidup.png',)),
+		'MusikMati' 	: gambar('Menu_Pengaturan', ('MusikMati.png',)),
+		'Kembali' 		: gambar('Menu_Pengaturan', ('Kembali.png',))
+	},
 	'MENU_INFO' : {
 		'Info' 		: gambar('Menu_Info', ('Info.png',)),
 	},
