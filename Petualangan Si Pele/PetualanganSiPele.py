@@ -119,6 +119,32 @@ TOMBOL = {
 			y = UKURAN_LAYAR[1] - 50,
 			gambar = GAMBAR['MENU_UTAMA']['Info']
 		)
+	},
+	'pengaturan' : {
+		'musik' : Tombol(
+			id = 0,
+			panjang = 340,
+			lebar = 88,
+			x = UKURAN_LAYAR[0] / 2,
+			y = 210,
+			gambar = GAMBAR['MENU_PENGATURAN']['Musik']
+		),
+		'efek_suara' : Tombol(
+			id = 1,
+			panjang = 340,
+			lebar = 88,
+			x = UKURAN_LAYAR[0] / 2,
+			y = 300,
+			gambar = GAMBAR['MENU_PENGATURAN']['EfekSuara']
+		),
+		'kembali' : Tombol(
+			id = 2,
+			panjang = 70,
+			lebar = 70,
+			x = 70,
+			y = UKURAN_LAYAR[1] - 50,
+			gambar = GAMBAR['MENU_PENGATURAN']['Kembali']
+		)
 	}
 }
 
