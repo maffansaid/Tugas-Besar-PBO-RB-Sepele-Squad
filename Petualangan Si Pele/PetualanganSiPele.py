@@ -120,6 +120,15 @@ pygame.display.set_icon(GAMBAR['MENU_UTAMA']['Icon'])
 Latar_belakang = pygame.transform.smoothscale(
 	GAMBAR['MENU_UTAMA']['LatarBelakang'], UKURAN_LAYAR)
 
+Latar_belakang_info = pygame.Surface(UKURAN_LAYAR)
+Latar_belakang_info.fill((0, 0, 0))
+Latar_belakang_info.set_alpha(150)
+
+Gambar_Info = pygame.transform.smoothscale(
+	GAMBAR['MENU_INFO']['Info'], (600, 400))
+Posisi_Info = Gambar_Info.get_rect(
+	center = (UKURAN_LAYAR[0] / 2, UKURAN_LAYAR[1] / 2))
+
 musik = pygame.mixer.music.load('Assets\\Music\\Musik_Menu.mp3')
 pygame.mixer.music.play(-1)
 
