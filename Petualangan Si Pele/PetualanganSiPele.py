@@ -208,7 +208,9 @@ while berjalan:
 				if Utama:
 					for tombol in TOMBOL['menu'].values():
 						if TOMBOL_AKTIF == tombol.id:
-							if tombol.id == 3:
+							if tombol.id == 2:
+								berjalan = Menu_pengaturan(Layar)
+							elif tombol.id == 3:
 								berjalan = False
 							elif tombol.id == 4:
 								Utama = False
