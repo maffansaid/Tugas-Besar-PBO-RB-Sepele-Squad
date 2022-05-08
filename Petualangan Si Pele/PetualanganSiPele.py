@@ -196,7 +196,7 @@ while berjalan:
 		Layar.blit(Latar_belakang_info, (0, 0))
 		Layar.blit(Gambar_Info, Posisi_Info)
 		
-	for acara in pygame.event.get()
+	for acara in pygame.event.get():
 		if acara.type == pygame.QUIT:
 			berjalan = False
 		elif acara.type == pygame.locals.KEYUP:
