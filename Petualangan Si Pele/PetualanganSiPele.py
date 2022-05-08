@@ -132,14 +132,18 @@ Posisi_Info = Gambar_Info.get_rect(
 musik = pygame.mixer.music.load('Assets\\Music\\Musik_Menu.mp3')
 pygame.mixer.music.play(-1)
 
-berjalan = True
+Utama = berjalan = True
 while berjalan:
 	Layar.blit(Latar_belakang, (0, 0))
 	
 	for tombol in TOMBOL['menu'].values():
 		tombol.aktif(Layar)
-	
-	for acara in pygame.event.get():
+		
+	if not Utama:
+		Layar.blit(Latar_belakang_info, (0, 0))
+		Layar.blit(Gambar_Info, Posisi_Info)
+		
+	for acara in pygame.event.get()
 		if acara.type == pygame.QUIT:
 			berjalan = False
 		elif acara.type == pygame.locals.KEYUP:
@@ -147,5 +151,17 @@ while berjalan:
 				TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 5
 			elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT):
 				TOMBOL_AKTIF = (TOMBOL_AKTIF + 4) % 5
+			elif acara.key == pygame.locals.K_RETURN:
+				if Utama:
+					for tombol in TOMBOL['menu'].values():
+						if TOMBOL_AKTIF == tombol.id:
+							if tombol.id == 3:
+								berjalan = False
+							elif tombol.id == 4:
+								Utama = False
+							TOMBOL_AKTIF = tombol.id
+							break
+				else:
+					Utama = True
 	pygame.display.flip()
 pygame.quit()
