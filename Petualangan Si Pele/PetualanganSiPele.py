@@ -159,13 +159,21 @@ def Menu_pengaturan(Layar):
 		for acara in pygame.event.get():
 			if acara.type == pygame.QUIT:
 				return False
-			
 			elif acara.type == pygame.locals.KEYUP:
 				if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT):
 					TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 3
 				elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT):
-					TOMBOL_AKTIF = (TOMBOL_AKTIF + 2) % 3
-
+					TOMBOL_AKTIF = (TOMBOL_AKTIF + 2) % 3	
+				elif acara.key == pygame.locals.K_RETURN:
+					for tombol in TOMBOL['pengaturan'].values():
+						if TOMBOL_AKTIF == tombol.id:
+							if tombol.id == 0:
+								pass
+							elif tombol.id == 1:
+								pass
+							elif tombol.id == 2:
+								return True
+							break
 		pygame.display.flip()
 
 # Program Utama (Menu Utama)
