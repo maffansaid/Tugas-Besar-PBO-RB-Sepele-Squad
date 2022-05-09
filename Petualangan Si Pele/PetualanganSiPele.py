@@ -157,6 +157,7 @@ def Menu_pengaturan(Layar):
 			musik = Suara_hidup
 		else:
 			musik = Suara_mati
+		Layar.blit(musik, posisi_musik)
 		
 		for tombol in TOMBOL['pengaturan'].values():
 			tombol.aktif(Layar)
