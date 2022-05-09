@@ -133,7 +133,9 @@ TOMBOL = {
 
 def Menu_pengaturan(Layar):
 	global UKURAN_LAYAR, GAMBAR, TOMBOL, TOMBOL_AKTIF, MUSIK, EFEK_SUARA
-
+	
+	TOMBOL_AKTIF = 0
+	
 	Latar_belakang = pygame.transform.smoothscale(
 		GAMBAR['MENU_PENGATURAN']['LatarBelakang'].convert(), 
 		UKURAN_LAYAR)
