@@ -139,6 +139,11 @@ def Menu_pengaturan(Layar):
 	Latar_belakang = pygame.transform.smoothscale(
 		GAMBAR['MENU_PENGATURAN']['LatarBelakang'].convert(), 
 		UKURAN_LAYAR)
+	
+	Suara_hidup = pygame.transform.smoothscale(
+		GAMBAR['MENU_PENGATURAN']['MusikHidup'], (50, 50))
+	Suara_mati = pygame.transform.smoothscale(
+		GAMBAR['MENU_PENGATURAN']['MusikMati'], (50, 50))
 
 	while True:
 		Layar.blit(Latar_belakang, (0, 0))
