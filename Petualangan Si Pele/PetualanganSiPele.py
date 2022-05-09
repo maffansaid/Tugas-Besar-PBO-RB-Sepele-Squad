@@ -196,7 +196,7 @@ def Menu_pengaturan(Layar):
 Layar = pygame.display.set_mode(UKURAN_LAYAR)
 
 pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
-pygame.display.set_icon(GAMBAR['MENU_UTAMA']['Icon'])
+pygame.display.set_icon(GAMBAR['MENU_UTAMA']['Icon'].convert())
 
 Latar_belakang = pygame.transform.smoothscale(
 	GAMBAR['MENU_UTAMA']['LatarBelakang'], UKURAN_LAYAR)
