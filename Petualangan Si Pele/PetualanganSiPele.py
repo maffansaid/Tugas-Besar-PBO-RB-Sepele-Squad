@@ -181,6 +181,10 @@ def Menu_pengaturan(Layar):
 						if TOMBOL_AKTIF == tombol.id:
 							if tombol.id == 0:
 								MUSIK = not MUSIK
+								if MUSIK:
+									pygame.mixer.music.unpause()
+								else:
+									pygame.mixer.music.pause()
 							elif tombol.id == 1:
 								pass
 							elif tombol.id == 2:
