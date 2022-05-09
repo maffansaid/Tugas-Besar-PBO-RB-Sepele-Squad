@@ -163,6 +163,7 @@ def Menu_pengaturan(Layar):
 			efek_suara = Suara_hidup
 		else:
 			efek_suara = Suara_mati
+		Layar.blit(efek_suara, posisi_efek_suara)
 		
 		for tombol in TOMBOL['pengaturan'].values():
 			tombol.aktif(Layar)
