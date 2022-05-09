@@ -21,8 +21,6 @@ def gambar(lokasi, nama):
 		return ambil_gambar(lokasi, nama[0])	
 	return [ambil_gambar(lokasi, i) for i in nama]
 
-rubah_ukuran = lambda A,B,C: A * C / B
-
 GAMBAR = {
 	'MENU_UTAMA' : {
 		'Icon' 		: gambar('Menu_Utama', ('Icon.jpg',)),
@@ -35,11 +33,11 @@ GAMBAR = {
 	},
 	'MENU_PENGATURAN' : {
 		'LatarBelakang' : gambar('Menu_Pengaturan', ('LatarBelakang.jpg',)),
-		'Musik' 		: gambar('Menu_Pengaturan', ('Musik.png',)),
+		'Musik' 	: gambar('Menu_Pengaturan', ('Musik.png',)),
 		'EfekSuara' 	: gambar('Menu_Pengaturan', ('EfekSuara.png',)),
 		'MusikHidup' 	: gambar('Menu_Pengaturan', ('MusikHidup.png',)),
 		'MusikMati' 	: gambar('Menu_Pengaturan', ('MusikMati.png',)),
-		'Kembali' 		: gambar('Menu_Pengaturan', ('Kembali.png',))
+		'Kembali' 	: gambar('Menu_Pengaturan', ('Kembali.png',))
 	},
 	'MENU_INFO' : {
 		'Info' 		: gambar('Menu_Info', ('Info.png',)),
@@ -67,10 +65,7 @@ TOMBOL = {
 		'mulai' : Tombol(
 			id = 0,
 			panjang = 280,
-			lebar = rubah_ukuran(
-				GAMBAR['MENU_UTAMA']['Mulai'].get_height(),
-				GAMBAR['MENU_UTAMA']['Mulai'].get_width(),
-				280),
+			lebar = 107,
 			x = UKURAN_LAYAR[0] / 4,
 			y = 100,
 			gambar = GAMBAR['MENU_UTAMA']['Mulai']
@@ -78,10 +73,7 @@ TOMBOL = {
 		'karakter' : Tombol(
 			id = 1,
 			panjang = 280,
-			lebar = rubah_ukuran(
-				GAMBAR['MENU_UTAMA']['Karakter'].get_height(),
-				GAMBAR['MENU_UTAMA']['Karakter'].get_width(),
-				280),
+			lebar = 107,
 			x = UKURAN_LAYAR[0] / 4,
 			y = 200,
 			gambar = GAMBAR['MENU_UTAMA']['Karakter']
@@ -89,10 +81,7 @@ TOMBOL = {
 		'Pengaturan' : Tombol(
 			id = 2,
 			panjang = 280,
-			lebar = rubah_ukuran(
-				GAMBAR['MENU_UTAMA']['Pengaturan'].get_height(),
-				GAMBAR['MENU_UTAMA']['Pengaturan'].get_width(),
-				280),
+			lebar = 107,
 			x = UKURAN_LAYAR[0] / 4,
 			y = 300,
 			gambar = GAMBAR['MENU_UTAMA']['Pengaturan']
@@ -100,10 +89,7 @@ TOMBOL = {
 		'keluar' : Tombol(
 			id = 3,
 			panjang = 280,
-			lebar = rubah_ukuran(
-				GAMBAR['MENU_UTAMA']['Keluar'].get_height(),
-				GAMBAR['MENU_UTAMA']['Keluar'].get_width(),
-				280),
+			lebar = 107,
 			x = UKURAN_LAYAR[0] / 4,
 			y = 400,
 			gambar = GAMBAR['MENU_UTAMA']['Keluar']
