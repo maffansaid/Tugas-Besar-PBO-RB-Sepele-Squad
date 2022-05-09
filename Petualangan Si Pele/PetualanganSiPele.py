@@ -152,6 +152,9 @@ def Menu_pengaturan(Layar):
 
 	while True:
 		Layar.blit(Latar_belakang, (0, 0))
+		
+		for tombol in TOMBOL['pengaturan'].values():
+			tombol.aktif(Layar)
 
 		for acara in pygame.event.get():
 			if acara.type == pygame.QUIT:
