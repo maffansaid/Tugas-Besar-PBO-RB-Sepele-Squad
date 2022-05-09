@@ -46,24 +46,21 @@ GAMBAR = {
 	},
 }
 
-class Tombol(pygame.sprite.Sprite):
+class Tombol:
 	def __init__(self, **variabel):
-		super(Tombol, self).__init__()
 		self.id = variabel['id']
-		self._ukuran = (variabel['panjang'], variabel['lebar'])
-		self._pos = (variabel['x'], variabel['y'])
-		self._file = variabel['gambar']
+		self.__ukuran = (variabel['panjang'], variabel['lebar'])
+		self.__posisi = (variabel['x'], variabel['y'])
+		self.__file = variabel['gambar']
 	def aktif(self, Layar):
 		global TOMBOL_AKTIF
 		if TOMBOL_AKTIF == self.id:
 			gambar = pygame.transform.smoothscale(
-				self._file, 
-				(self._ukuran[0] + 15, self._ukuran[1] + 15))
+				self.__file, (self.__ukuran[0] + 15, self.__ukuran[1] + 15))
 		else:
 			gambar = pygame.transform.smoothscale(
-				self._file, self._ukuran)
-		posisi = gambar.get_rect(center = self._pos)
-		Layar.blit(gambar, posisi)
+				self.__file, self.__ukuran)
+		Layar.blit(gambar, gambar.get_rect(center = self.__posisi))
 		
 TOMBOL = {
 	'menu' : {
