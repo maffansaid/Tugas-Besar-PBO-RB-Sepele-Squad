@@ -180,7 +180,7 @@ def Menu_pengaturan(Layar):
 					for tombol in TOMBOL['pengaturan'].values():
 						if TOMBOL_AKTIF == tombol.id:
 							if tombol.id == 0:
-								pass
+								MUSIK = not MUSIK
 							elif tombol.id == 1:
 								pass
 							elif tombol.id == 2:
