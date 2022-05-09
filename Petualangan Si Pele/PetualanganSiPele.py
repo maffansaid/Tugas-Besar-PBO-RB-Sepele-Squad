@@ -199,7 +199,7 @@ pygame.display.set_caption('Petualangan Si Pele By Sepele.SQD')
 pygame.display.set_icon(GAMBAR['MENU_UTAMA']['Icon'].convert())
 
 Latar_belakang = pygame.transform.smoothscale(
-	GAMBAR['MENU_UTAMA']['LatarBelakang'], UKURAN_LAYAR)
+	GAMBAR['MENU_UTAMA']['LatarBelakang'].convert(), UKURAN_LAYAR)
 
 Latar_belakang_info = pygame.Surface(UKURAN_LAYAR)
 Latar_belakang_info.fill((0, 0, 0))
