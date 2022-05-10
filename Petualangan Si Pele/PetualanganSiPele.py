@@ -173,10 +173,13 @@ def Menu_pengaturan(Layar):
 			if acara.type == pygame.QUIT:
 				return False
 			elif acara.type == pygame.locals.KEYUP:
-				if acara.key in (pygame.locals.K_DOWN, pygame.locals.K_RIGHT):
-					TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 3
-				elif acara.key in (pygame.locals.K_UP, pygame.locals.K_LEFT):
-					TOMBOL_AKTIF = (TOMBOL_AKTIF + 2) % 3	
+				if acara.key in tombol_bawah_kanan or acara.key in tombol_atas_kiri:
+					if EFEK_SUARA:
+						EFEK_TOMBOL_GESER.play()
+					if acara.key in tombol_bawah_kanan:
+						TOMBOL_AKTIF = (TOMBOL_AKTIF + 1) % 3
+					elif acara.key in tombol_atas_kiri:
+						TOMBOL_AKTIF = (TOMBOL_AKTIF + 2) % 3
 				elif acara.key == pygame.locals.K_RETURN:
 					for tombol in TOMBOL['pengaturan'].values():
 						if TOMBOL_AKTIF == tombol.id:
