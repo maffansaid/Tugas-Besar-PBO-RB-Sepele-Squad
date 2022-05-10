@@ -239,6 +239,8 @@ while berjalan:
 				elif acara.key in tombol_atas_kiri:
 					TOMBOL_AKTIF = (TOMBOL_AKTIF + 4) % 5
 			elif acara.key == pygame.locals.K_RETURN:
+				if EFEK_SUARA:
+					EFEK_TOMBOL_TEKAN.play()
 				if Utama:
 					for tombol in TOMBOL['menu'].values():
 						if TOMBOL_AKTIF == tombol.id:
