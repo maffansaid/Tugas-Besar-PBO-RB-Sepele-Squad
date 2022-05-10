@@ -78,7 +78,7 @@ TOMBOL = {
 			id = 0,
 			panjang = 280,
 			lebar = 107,
-			x = UKURAN_LAYAR[0] / 4,
+			x = 240,
 			y = 100,
 			gambar = GAMBAR['MENU_UTAMA']['Mulai']
 		),
@@ -86,7 +86,7 @@ TOMBOL = {
 			id = 1,
 			panjang = 280,
 			lebar = 107,
-			x = UKURAN_LAYAR[0] / 4,
+			x = 240,
 			y = 200,
 			gambar = GAMBAR['MENU_UTAMA']['Karakter']
 		),
@@ -94,7 +94,7 @@ TOMBOL = {
 			id = 2,
 			panjang = 280,
 			lebar = 107,
-			x = UKURAN_LAYAR[0] / 4,
+			x = 240,
 			y = 300,
 			gambar = GAMBAR['MENU_UTAMA']['Pengaturan']
 		),
@@ -102,7 +102,7 @@ TOMBOL = {
 			id = 3,
 			panjang = 280,
 			lebar = 107,
-			x = UKURAN_LAYAR[0] / 4,
+			x = 240,
 			y = 400,
 			gambar = GAMBAR['MENU_UTAMA']['Keluar']
 		),
@@ -110,8 +110,8 @@ TOMBOL = {
 			id = 4,
 			panjang = 60,
 			lebar = 60,
-			x = UKURAN_LAYAR[0] - 50,
-			y = UKURAN_LAYAR[1] - 50,
+			x = 910,
+			y = 490,
 			gambar = GAMBAR['MENU_UTAMA']['Info']
 		)
 	},
@@ -120,7 +120,7 @@ TOMBOL = {
 			id = 0,
 			panjang = 340,
 			lebar = 88,
-			x = UKURAN_LAYAR[0] / 2,
+			x = 480,
 			y = 210,
 			gambar = GAMBAR['MENU_PENGATURAN']['Musik']
 		),
@@ -128,7 +128,7 @@ TOMBOL = {
 			id = 1,
 			panjang = 340,
 			lebar = 88,
-			x = UKURAN_LAYAR[0] / 2,
+			x = 480,
 			y = 300,
 			gambar = GAMBAR['MENU_PENGATURAN']['EfekSuara']
 		),
@@ -137,7 +137,7 @@ TOMBOL = {
 			panjang = 70,
 			lebar = 70,
 			x = 70,
-			y = UKURAN_LAYAR[1] - 50,
+			y = 490,
 			gambar = GAMBAR['MENU_PENGATURAN']['Kembali']
 		)
 	}
