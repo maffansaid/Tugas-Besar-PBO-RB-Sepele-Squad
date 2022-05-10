@@ -214,8 +214,7 @@ Latar_belakang_info.set_alpha(150)
 Gambar_Info = pygame.transform.smoothscale(
 	GAMBAR['MENU_INFO']['Info'], (600, 400))
 
-musik = pygame.mixer.music.load('Assets\\Musik\\Musik_Menu.mp3')
-pygame.mixer.music.play(-1)
+MUSIK_MENU.play(-1)
 
 Utama = berjalan = True
 while berjalan:
