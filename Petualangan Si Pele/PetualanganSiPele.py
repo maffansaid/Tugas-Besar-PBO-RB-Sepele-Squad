@@ -225,7 +225,7 @@ while berjalan:
 		
 	if not Utama:
 		Layar.blit(Latar_belakang_info, (0, 0))
-		Layar.blit(Gambar_Info, Posisi_Info)
+		Layar.blit(Gambar_Info, Gambar_Info.get_rect(center = (480, 270)))
 		
 	for acara in pygame.event.get():
 		if acara.type == pygame.QUIT:
