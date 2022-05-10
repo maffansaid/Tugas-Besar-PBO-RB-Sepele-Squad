@@ -13,7 +13,11 @@ TOMBOL_AKTIF = 0
 
 EFEK_SUARA = True
 MUSIK = True
+
 MUSIK_MENU = pygame.mixer.Sound('Assets\\Musik\\Musik_Menu.mp3')
+
+EFEK_TOMBOL_GESER = pygame.mixer.Sound('Assets\\Efek_Suara\\Tombol_Geser.wav')
+EFEK_TOMBOL_TEKAN = pygame.mixer.Sound('Assets\\Efek_Suara\\Tombol_Tekan.mp3')
 
 def gambar(lokasi, nama):
 	def ambil_gambar(lokasi_file, nama_gambar):
