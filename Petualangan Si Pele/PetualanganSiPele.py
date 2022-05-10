@@ -188,9 +188,9 @@ def Menu_pengaturan(Layar):
 							if tombol.id == 0:
 								MUSIK = not MUSIK
 								if MUSIK:
-									pygame.mixer.music.unpause()
+									MUSIK_MENU.play(-1)
 								else:
-									pygame.mixer.music.pause()
+									MUSIK_MENU.stop()
 							elif tombol.id == 1:
 								EFEK_SUARA = not EFEK_SUARA
 							elif tombol.id == 2:
