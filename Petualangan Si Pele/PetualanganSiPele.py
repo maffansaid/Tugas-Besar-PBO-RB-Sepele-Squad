@@ -181,6 +181,8 @@ def Menu_pengaturan(Layar):
 					elif acara.key in tombol_atas_kiri:
 						TOMBOL_AKTIF = (TOMBOL_AKTIF + 2) % 3
 				elif acara.key == pygame.locals.K_RETURN:
+					if EFEK_SUARA:
+						EFEK_TOMBOL_TEKAN.play()
 					for tombol in TOMBOL['pengaturan'].values():
 						if TOMBOL_AKTIF == tombol.id:
 							if tombol.id == 0:
