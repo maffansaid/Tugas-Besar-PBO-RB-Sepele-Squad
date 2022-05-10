@@ -19,6 +19,13 @@ MUSIK_MENU = pygame.mixer.Sound('Assets\\Musik\\Musik_Menu.mp3')
 EFEK_TOMBOL_GESER = pygame.mixer.Sound('Assets\\Efek_Suara\\Tombol_Geser.wav')
 EFEK_TOMBOL_TEKAN = pygame.mixer.Sound('Assets\\Efek_Suara\\Tombol_Tekan.mp3')
 
+tombol_atas = pygame.locals.K_UP
+tombol_bawah = pygame.locals.K_DOWN
+tombol_kanan = pygame.locals.K_RIGHT
+tombol_kiri = pygame.locals.K_LEFT
+tombol_bawah_kanan = (tombol_bawah, tombol_kanan)
+tombol_atas_kiri = (tombol_atas, tombol_kiri)
+
 def gambar(lokasi, nama):
 	def ambil_gambar(lokasi_file, nama_gambar):
 		return pygame.image.load(f'Assets\\{lokasi_file}\\{nama_gambar}')
