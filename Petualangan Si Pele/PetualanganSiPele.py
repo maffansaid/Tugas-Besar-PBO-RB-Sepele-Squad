@@ -160,21 +160,15 @@ def Menu_pengaturan(Layar):
 	while True:
 		Layar.blit(Latar_belakang, (0, 0))
 		
-		if MUSIK:
-			musik = Suara_hidup
-		else:
-			musik = Suara_mati
-		Layar.blit(musik, posisi_musik)
-		
-		if EFEK_SUARA:
-			efek_suara = Suara_hidup
-		else:
-			efek_suara = Suara_mati
-		Layar.blit(efek_suara, posisi_efek_suara)
-		
 		for tombol in TOMBOL['pengaturan'].values():
 			tombol.aktif(Layar)
 
+		musik = Suara_hidup if MUSIK else Suara_mati
+		Layar.blit(musik, musik.get_rect(center = (600, 210)))
+
+		efek_suara = Suara_hidup if EFEK_SUARA else Suara_mati
+		Layar.blit(efek_suara, efek_suara.get_rect(center = (600, 300)))
+		
 		for acara in pygame.event.get():
 			if acara.type == pygame.QUIT:
 				return False
